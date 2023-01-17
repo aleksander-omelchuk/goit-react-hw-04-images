@@ -1,7 +1,10 @@
+import styled from '@emotion/styled';
+import iconSerch from 'images/search.svg';
+
 /*
  * Стили компонента Searchbar
  */
-.header {
+export const SerchBar = styled.header`
   top: 0;
   left: 0;
   position: sticky;
@@ -18,12 +21,12 @@
   background-color: #3f51b5;
   box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2),
     0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
-}
+`;
 
 /*
  * Стили компонента SearchForm
  */
-.form {
+export const SearchForm = styled.form`
   display: flex;
   align-items: center;
   width: 100%;
@@ -31,14 +34,14 @@
   background-color: #fff;
   border-radius: 3px;
   overflow: hidden;
-}
+`;
 
-.btn {
+export const SearchFormButton = styled.button`
   display: inline-block;
   width: 48px;
   height: 48px;
   border: 0;
-  background-image: url('https://image.flaticon.com/icons/svg/149/149852.svg');
+  background-image: url(${iconSerch});
   background-size: 40%;
   background-repeat: no-repeat;
   background-position: center;
@@ -46,13 +49,13 @@
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
   cursor: pointer;
   outline: none;
-}
 
-.btn:hover {
-  opacity: 1;
-}
+  &:hover {
+    opacity: 1;
+  }
+`;
 
-.label {
+export const SearchFormButtonLabel = styled.span`
   position: absolute;
   width: 1px;
   height: 1px;
@@ -62,9 +65,9 @@
   white-space: nowrap;
   clip-path: inset(50%);
   border: 0;
-}
+`;
 
-.input {
+export const SearchFormInput = styled.input`
   display: inline-block;
   width: 100%;
   font: inherit;
@@ -73,9 +76,9 @@
   outline: none;
   padding-left: 4px;
   padding-right: 4px;
-}
 
-.input::placeholder {
-  font: inherit;
-  font-size: 18px;
-}
+  &::placeholder {
+    font: inherit;
+    font-size: 18px;
+  }
+`;
